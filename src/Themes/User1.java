@@ -1,6 +1,6 @@
 package Themes;
 import java.util.Scanner;
-class PhonePay {
+class Phonepee {
 	void passWord(int password) {
 		System.out.println("Your Password: "+password+" is correct");
 		System.out.println();
@@ -26,7 +26,7 @@ class PhonePay {
 public class User1{
 	public static void main(String arg[]){
 		Scanner sc=new Scanner(System.in);
-		PhonePay p=new PhonePay();
+		Phonepee p=new Phonepee();
 		System.out.println("Enter Password:");
 		p.passWord(sc.nextInt());
 		System.out.println(p.open());

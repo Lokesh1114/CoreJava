@@ -27,7 +27,6 @@ public class ConstructorDemo {
 	Employe e1=new Employe(sc.nextInt(),sc.nextDouble());
 	Employe  e2=new Employe(sc.next());
 	e1.show();
-
 	}
 
 }

@@ -1,11 +1,14 @@
 package Themes;
-
-public class Hello {
+class hi{
+	hi(){
+		System.out.println("hgwuigdw");
+	}
+}
+public class Hello extends hi{
 
 	public static void main(String[] args) {
-		System.out.println("Hello");
-		System.out.println("hiii");
-
+		Hello h=new Hello();
+		
 	}
 
 }
