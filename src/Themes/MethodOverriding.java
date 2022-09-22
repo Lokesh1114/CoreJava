@@ -1,42 +1,55 @@
 package Themes;
-class AutoMobile{
-	void cost() {
-		System.out.println("No Cost");
+import java.util.*;
+class Online{
+	String name;
+	int AccNo;
+	int Password;
+	int balance;
+	Scanner sc=new Scanner(System.in);
+	void details() {
+		System.out.println("Enter Details Name/Account No/Password");
 	}
-	void milage() {
-		System.out.println("No Milage");
-	}
-}
-class Benze extends AutoMobile{
-	void cost() {
-		System.out.println("Benz cost Rs.41.99 Lakhs");
-	}
-	void milage() {
-		System.out.println("Benz Milage 7KMPL");
-	}
-}
-class RollRoyce extends AutoMobile{
-	void cost() {
-		System.out.println("RollRoyce cost Rs.8.02 Crores");
-	}
-	void milage() {
-		System.out.println("RollRoyce Milage 9.8 Kmpl");
+	void balance() {
+		System.out.println("Balance:");
+		balance=sc.nextInt();
 	}
 }
-public class MethodOverriding {
-	public static void main(String[] args) {
-		AutoMobile c=new AutoMobile();
-		System.out.println("__Generally Car Had:__");
-		c.cost();
-		c.milage();
-		System.out.println("__But Brand Mercidus Benze__");
-		c=new Benze();
-		c.cost();
-		c.milage();
-		System.out.println("__And Brand RollRoyce(RR)__");
-		c=new RollRoyce();
-		c.cost();
-		c.milage();
+class Phonepay extends Online{
+	void details() {
+		System.out.println("Details for PhonePay:");
+		name=sc.next();
+		AccNo=sc.nextInt();
+		Password=sc.nextInt();
+		System.out.println("Name: "+name+"\nAccount: "+AccNo+"\nPassword: "+Password);
 	}
-
+	void balance() {
+		System.out.println("Balance:"+super.balance);
+	}
+	
+}
+class GPay extends Online{
+	void details() {
+		System.out.println("Details for Gpay:");
+		name=sc.next();
+		AccNo=sc.nextInt();
+		Password=sc.nextInt();
+		System.out.println("Name: "+name+"\nAccount: "+AccNo+"\nPassword: "+Password);
+	}
+	void balance() {
+		System.out.println("Balance:"+super.balance);
+	}
+	
+}
+public class MethodOverRiding {
+	public static void main(String arg[]) {
+		Online ob=new Online();
+		ob.details();
+		ob.balance();
+		ob=new Phonepay();
+		ob.details();
+		ob.balance();
+		ob=new GPay();
+		ob.details();
+		ob.balance();
+	}
 }
